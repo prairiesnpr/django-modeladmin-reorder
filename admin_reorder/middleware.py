@@ -30,7 +30,7 @@ class ModelAdminReorder(MiddlewareMixin):
         self.request = request
         self.app_list = app_list
 
-         admin_site_name = getattr(settings, 'ADMIN_REORDER_SITE', None)
+        admin_site_name = getattr(settings, 'ADMIN_REORDER_SITE', None)
         if admin_site_name:
             module_name, site_name = admin_site_name.rsplit('.', 1)
             module = import_module(module_name)
